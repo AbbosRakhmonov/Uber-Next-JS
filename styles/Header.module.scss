@@ -1,0 +1,190 @@
+@use "colors" as c;
+@import "./fonts";
+
+.header {
+  width: 100%;
+  height: 600px;
+
+  .header__wrapper {
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .card {
+      flex-basis: 50%;
+      background: #ffffff;
+
+      .cardHeader {
+        border-bottom: 1px solid #EEEEEE;
+        background: #FDFDFC;
+
+        .cardHeaderList {
+          display: flex;
+          align-items: stretch;
+          justify-content: space-around;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          position: relative;
+
+          &:after {
+            content: "";
+            position: absolute;
+            width: 15%;
+            height: 4px;
+            background: c.$primary;
+            bottom: 1px;
+            left: 0;
+            transition: 0.3s ease;
+            transform: translateX(60%);
+          }
+
+          li {
+            width: 105px;
+            min-width: 105px;
+            text-align: center;
+            padding: 28px 12px 20px 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            background: transparent;
+            cursor: pointer;
+
+            .img-container {
+              width: 24px;
+              height: 24px;
+            }
+
+            p {
+              margin-top: 8px;
+              font-size: 1rem;
+              font-family: "Roboto-Medium", sans-serif;
+            }
+          }
+        }
+      }
+
+      .cardBody {
+        padding: 48px;
+
+        .inputContainer {
+          position: relative;
+
+          .inputShapes {
+            position: absolute;
+            left: 22px;
+            bottom: 30px;
+            top: 30px;
+            background: c.$primary;
+            width: 1px;
+
+            &:after {
+              content: "";
+              position: absolute;
+              width: 7px;
+              height: 7px;
+              border: 1px solid c.$primary;
+              bottom: -10px;
+              left: -3px;
+            }
+
+            &:before {
+              content: "";
+              position: absolute;
+              width: 7px;
+              height: 7px;
+              border: 1px solid c.$primary;
+              top: -10px;
+              left: -3px;
+              border-radius: 50%;
+            }
+          }
+        }
+
+        .cardInput {
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+          background: #F6F6F6;
+          position: relative;
+          margin-bottom: 22px;
+
+          .datalist {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            bottom: -100%;
+          }
+
+          input {
+            width: 100%;
+            padding: 11px 33px 11px 41px;
+            background: #F6F6F6;
+            font-size: 1.2rem;
+            border: none;
+
+            &:focus {
+              outline: none;
+            }
+          }
+
+          .cardInputIcon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: 15px;
+            height: 100%;
+            border: none;
+            background: transparent;
+
+            &:focus {
+              outline: none;
+            }
+
+            &:hover {
+              svg {
+                fill: #545454;
+              }
+            }
+
+            svg {
+              fill: #C5C5C5;
+              transition: 0.3s ease;
+            }
+          }
+        }
+
+        .cardTitle {
+          font-family: "Poppins", sans-serif;
+          font-size: 3.125rem;
+          margin-bottom: 24px;
+        }
+
+        .cardText {
+          font-family: "Roboto-Regular", sans-serif;
+          font-size: 1.14rem;
+          margin-bottom: 18px;
+        }
+
+        .cardActions {
+          display: flex;
+          gap: 24px;
+          align-items: center;
+          flex-wrap: wrap;
+          margin-top: 24px;
+
+          .cardActionsBtn {
+            font-family: "Poppins", sans-serif;
+            font-size: 1.14rem;
+            border: none;
+            padding: 14px 25px;
+          }
+        }
+      }
+    }
+  }
+}
