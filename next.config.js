@@ -1,7 +1,7 @@
 const nextConfig = {
     reactStrictMode: true,
     images: {
-        formats: ['image/webp', 'image/svg+xml'],
+        formats: ['image/webp', 'image/jpeg', 'image/png'],
     }
 }
 
